@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardBackgroundColor="@android:color/darker_gray"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/pd_image"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/saletag_text"
+            android:src="@drawable/drinks"
+            android:scaleType="fitXY"
+            />
+
+        <TextView
+            android:id="@+id/saletag_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/pd_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="X Close"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/saletag_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/scroll"
+            android:orientation="horizontal"
+            >
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:hint="Sale percentage"
+                android:paddingStart="10dp"
+                android:inputType="numberDecimal"
+                />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Sale Off"
+                android:background="@drawable/picture_upload_btn"
+                />
+        </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/scroll"
+                app:layout_constraintTop_toBottomOf="@id/linear"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Advertise"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/black"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="200 $"
+                        android:textSize="20sp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@android:color/black"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="this is main advertisment of fresh gocery app \n and IT IS Good"
+                        android:textSize="20sp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@android:color/black"
+                        />
+                </LinearLayout>
+
+
+            </ScrollView>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
